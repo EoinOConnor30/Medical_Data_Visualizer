@@ -42,8 +42,8 @@ def draw_cat_plot():
 def draw_heat_map():
     # 11
    df_heat = df.drop(df[(df['ap_lo']>df['ap_hi']) | (df['height']<df['height'].quantile(0.025)) |
-                  (df['height']>df['height'].quantile(0.975)) | (df['weight']<df['weight'].quantile(0.025))
-                  | (df['weight']>df['weight'].quantile(0.975))].index)
+                    (df['height']>df['height'].quantile(0.975)) | (df['weight']<df['weight'].quantile(0.025))
+                    | (df['weight']>df['weight'].quantile(0.975))].index)
     # 12
     corr = df_heat.corr(method='pearson')
     
@@ -62,5 +62,6 @@ def draw_heat_map():
     # 16
     fig.savefig('heatmap.png')
     return fig
+
 
 
