@@ -30,7 +30,7 @@ def draw_cat_plot():
 
 
     # 8
-    fig = sns.catplot(data=df_cat, x='variable', y='size', col='cardio', hue='value', kind='bar')
+    fig = sns.catplot(data=df_cat, x='variable', y='size', col='cardio', hue='value', kind='bar').fig
 
 
     # 9
@@ -60,6 +60,7 @@ def draw_heat_map():
     # 16
     fig.savefig('heatmap.png')
     return fig
+
 
 
 
